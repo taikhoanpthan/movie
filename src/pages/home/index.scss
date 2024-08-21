@@ -1,0 +1,20 @@
+.hii {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); // 6 equal-width columns
+  gap: 20px;
+  padding: 10px 30px;
+  background-color: rgb(56, 48, 48);
+
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr); // 4 columns on medium screens
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // 2 columns on small screens
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // 1 column on extra-small screens
+  }
+}

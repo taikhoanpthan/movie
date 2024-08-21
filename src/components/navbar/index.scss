@@ -1,11 +1,58 @@
-.header{
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; // Space between the left and right sections
+  background: black;
+  padding: 20px 30px;
+
+  .header__left {
+    // Add styles for the left section here
+  }
+
+  .header__right {
+    color: white;
     display: flex;
+    text-align: center;
     align-items: center;
-    justify-content: space-between;
-    .header__left{
-        img{
-            width: 150px;
-        }
-        
+    gap: 20px;
+
+    button {
+      padding: 10px 20px;
+      border-radius: 15px;
+      outline: none;
+      border: none;
+      background-color: #ff9f1c; // Button background color
+      color: black; // Button text color
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ff6f00; // Button hover effect
+      }
     }
+  }
+
+  // Responsive design for smaller screens
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack elements vertically
+    align-items: flex-start; // Align items to the left
+    padding: 20px 20px;
+
+    .header__right {
+      width: 100%;
+      justify-content: space-between; // Space between buttons
+      margin-top: 10px; // Add spacing from the left section
+
+      button {
+        flex-grow: 1; // Buttons take equal width
+        padding: 10px;
+        margin-right: 10px; // Add spacing between buttons
+      }
+    }
+  }
 }

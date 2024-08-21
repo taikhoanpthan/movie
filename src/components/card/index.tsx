@@ -1,6 +1,7 @@
 import { Card } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Movie } from "../../models/movie";
+import"./index.scss"
 const { Meta } = Card;
 interface CardcomponentProps {
   movie: Movie;
@@ -14,7 +15,7 @@ function Cardcomponent({ movie }: CardcomponentProps) {
         cover={<img alt="example" src={movie.avatar} />}
         actions={[
           <span onClick={() => navigate(`detail/${movie.id}`)}>
-            View Details
+            Xem chi tiết
           </span>,
         ]}
       >

@@ -45,9 +45,8 @@ function Detail() {
   };
 
   return (
-    <div>
+    <div className="detail-container">
       <Card
-        style={{ width: 300 }}
         cover={<img alt="example" src={movie?.avatar} />}
       >
         <p>
@@ -78,7 +77,6 @@ function Detail() {
         <Button
           type="primary"
           onClick={showModal}
-          style={{ marginTop: "20px" }}
         >
           Xem Phim
         </Button>

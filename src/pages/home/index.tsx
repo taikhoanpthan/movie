@@ -19,10 +19,7 @@ function Home() {
     fetchMovie();
   }, []);
   return (
-    <div
-      className="hii"
-      style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr" }}
-    >
+    <div className="hii">
       {movies?.map((movieItem: Movie) => (
         <Cardcomponent key={movieItem.id} movie={movieItem} />
       ))}

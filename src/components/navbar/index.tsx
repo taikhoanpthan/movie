@@ -15,15 +15,13 @@ function Navbar() {
   return (
     <div className="header">
       <div className="header__left" onClick={handleLogoClick}>
-        <img
-          src="https://th.bing.com/th/id/OIP.WOTx-YdNZKABwaJ44_8PFwHaBG?rs=1&pid=ImgDetMain"
-          alt="Logo"
-        />
+        <h1 style={{color:"red"}}>VLXX.COM</h1>
       </div>
       <div className="header__right">
         <h1>Phim gần gũi cho mọi lứa tuổi</h1>
         <button onClick={handleDashboardClick}>Go to Dashboard</button>
       </div>
+      
     </div>
   );
 }

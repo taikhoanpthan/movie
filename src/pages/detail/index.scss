@@ -1,0 +1,105 @@
+.detail-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f0f2f5; // Light grey background for the container
+  
+    .ant-card {
+      background-color: #1f1f1f; // Dark background for the card
+      color: #fff; // White text color
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 400px; // Max width for larger screens
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); // Box-shadow for depth
+  
+      .ant-card-cover img {
+        border-radius: 8px 8px 0 0;
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+      }
+  
+      p {
+        margin: 10px 0;
+        strong {
+          color: #ff9f1c; // Highlighted color for labels
+        }
+      }
+  
+      .ant-card-meta-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      .ant-btn-primary {
+        background-color: #ff9f1c;
+        border-color: #ff9f1c;
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+        margin-top: 20px;
+  
+        &:hover {
+          background-color: #ff6f00;
+          border-color: #ff6f00;
+        }
+      }
+  
+      .ant-modal {
+        .ant-modal-content {
+          background-color: #1f1f1f;
+          color: #fff;
+        }
+  
+        .ant-modal-header {
+          border-bottom: 1px solid #ff9f1c;
+          background-color: #1f1f1f;
+        }
+  
+        .ant-modal-title {
+          color: #ff9f1c;
+        }
+      }
+    }
+  }
+  
+  // Responsive design
+  @media (max-width: 768px) {
+    .detail-container {
+      padding: 10px;
+  
+      .ant-card {
+        max-width: 100%; // Full width for small screens
+  
+        .ant-card-cover img {
+          height: 200px; // Reduce image height on smaller screens
+        }
+  
+        .ant-btn-primary {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+  
+      .ant-modal {
+        width: 100%;
+        max-width: 90%; // Modal width adjustment for small screens
+  
+        iframe {
+          height: 250px; // Reduce video height on small screens
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .detail-container {
+      .ant-card {
+        .ant-card-meta-title {
+          font-size: 16px; // Adjust font size for smaller screens
+        }
+      }
+    }
+  }
+  
