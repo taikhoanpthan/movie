@@ -1,7 +1,7 @@
 import { Card } from "antd";
 import { useNavigate } from "react-router-dom";
 import { Movie } from "../../models/movie";
-import"./index.scss"
+import "./index.scss";
 const { Meta } = Card;
 interface CardcomponentProps {
   movie: Movie;
@@ -19,14 +19,7 @@ function Cardcomponent({ movie }: CardcomponentProps) {
           </span>,
         ]}
       >
-        <Meta
-          title={
-            <p style={{ display: "flex", justifyContent: "space-between" }}>
-              <span>{movie.name}</span>
-              
-            </p>
-          }
-        />
+        <Meta title={<p>{movie.name}</p>} />
       </Card>
     </div>
   );
