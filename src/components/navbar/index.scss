@@ -1,0 +1,11 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header__left{
+        img{
+            width: 150px;
+        }
+        
+    }
+}
