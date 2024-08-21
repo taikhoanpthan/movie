@@ -54,7 +54,7 @@ function Detail() {
           {movie?.id}
         </p>
         <p>
-          <strong>Date of Birth: </strong>
+          <strong>Ngày sinh: </strong>
           {movie?.dateofbirth
             ? moment(movie.dateofbirth).format("DD/MM/YYYY")
             : "N/A"}
@@ -63,13 +63,13 @@ function Detail() {
         <Meta
           title={
             <>
-              <p>Tên: {movie?.name}</p>
-              <p>Thể loại: {movie?.category ? "Học sinh" : "Người lớn"}</p>
+              <p style={{color:"#ff9f1c"}}>Tên: {movie?.name}</p>
+              <p style={{color:"#ff9f1c"}}>Thể loại: {movie?.category ? "Học sinh" : "Người lớn"}</p>
             </>
           }
         />
         <p>
-          <strong>Description: </strong>
+          <strong>Mô tả: </strong>
           {movie?.description}
         </p>
 

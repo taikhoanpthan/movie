@@ -4,6 +4,9 @@
   gap: 20px;
   padding: 10px 30px;
   background-color: rgb(56, 48, 48);
+  width: 100vw; // Chiếm toàn bộ chiều rộng của viewport
+  height: 100vh; // Chiếm toàn bộ chiều cao của viewport
+  position: absolute; // Đặt vị trí tuyệt đối để nó chiếm toàn bộ màn hình
 
 
   @media (max-width: 1200px) {
