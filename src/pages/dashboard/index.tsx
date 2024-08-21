@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./index.scss";
 import api from "../../config/axios";
 import { Movie } from "../../models/movie";
@@ -40,6 +40,7 @@ function Dashboard() {
     fetchMovie();
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const onFinish = async (values: any) => {
     try {
       if (fileList.length > 0) {
@@ -60,6 +61,7 @@ function Dashboard() {
       setFileList([]);
       fetchMovie();
       setIsEditing(false);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error("Something went wrong!");
     }
@@ -70,6 +72,7 @@ function Dashboard() {
       await api.delete(`vlxx/${id}`);
       toast.success("Movie deleted successfully");
       fetchMovie();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       toast.error("Failed to delete movie");
     }
