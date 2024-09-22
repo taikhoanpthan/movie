@@ -4,7 +4,6 @@ import api from "../../config/axios";
 import { Movie } from "../../models/movie";
 import { useParams } from "react-router-dom";
 import { Card, Button, Modal, Rate } from "antd";
-import Meta from "antd/es/card/Meta";
 import moment from "moment";
 
 function Detail() {
