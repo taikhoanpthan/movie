@@ -55,13 +55,18 @@ function Detail() {
         {/* Movie Info Section */}
         <h1 className="movie-title">{movie?.name}</h1>
         <div className="movie-details">
-          <p><strong>Year:</strong> {movie?.dateofbirth ? moment(movie.dateofbirth).format("YYYY") : "N/A"}</p>
+          <p>
+            <strong>Year:</strong>{" "}
+            {movie?.dateofbirth
+              ? moment(movie.dateofbirth).format("YYYY")
+              : "N/A"}
+          </p>
         </div>
 
         {/* Rating */}
         <div className="rating">
           <Rate disabled defaultValue={4.5} style={{ fontSize: 20 }} />
-          <span>{` ${movie?.rating || "4.5"}/5`}</span>
+          <span>4.5/5</span>
         </div>
 
         {/* Description */}
