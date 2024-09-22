@@ -6,7 +6,7 @@ function Layout() {
     <div>
       <Navbar />
       <Outlet />
-      <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      {/* <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <img
           src="https://qph.cf2.quoracdn.net/main-qimg-423be0e0ab38d327137c89e58584e3c2"
           alt=""
@@ -17,7 +17,7 @@ function Layout() {
           alt=""
           style={{ width: "600px", maxWidth: "100%", margin: "10px 0" }}
         />
-      </div>
+      </div> */}
     </div>
   );
 }

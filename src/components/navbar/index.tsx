@@ -15,7 +15,7 @@ function Navbar() {
   return (
     <div className="header">
       <div className="header__left" onClick={handleLogoClick}>
-        <h1 style={{color:"red"}}>VLXX.COM</h1>
+        <h1 style={{color:"red"}}>MY-MOVIE</h1>
       </div>
       <div className="header__right">
         <h1>Phim gần gũi cho mọi lứa tuổi</h1>

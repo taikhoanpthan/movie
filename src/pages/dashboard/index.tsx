@@ -90,7 +90,7 @@ function Dashboard() {
       key: "name",
     },
     {
-      title: "Ngày tháng năm sinh",
+      title: "Ngày thêm phim",
       dataIndex: "dateofbirth",
       key: "dateofbirth",
     },

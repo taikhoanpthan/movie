@@ -1,87 +1,73 @@
 .huhu {
-    width: 100%;
-    max-width: 300px;
-  
-    .ant-card {
-      background-color: #000;  // Black background
-      border: none;
-      border-radius: 8px;
-      overflow: hidden;
-      color: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);  // Box-shadow for depth
-      max-height: 500px;  // Set the maximum height for the card
-  
-      .ant-card-cover img {
-        border-radius: 8px 8px 0 0;
-        object-fit: cover;
-        height: 250px;  // Reduced height for the image
-        padding: 10px;
-      }
-  
-      .ant-card-meta {
-        width: 100%;
-        padding: 10px;
-        background-color: #111;  // Slightly lighter background for meta
-        
-        .ant-card-meta-title {
-          width: 100%;
-          font-size: 16px;
-          color: #fff;
-        }
-  
-        .ant-card-meta-description {
-          font-size: 14px;
-          color: #aaa;
-        }
-      }
-  
-      .ant-card-actions {
-        background-color: #111;
-        border-top: 1px solid #333;
-        text-align: center;
-        padding: 10px;
-  
-        span {
-          color: #ff9f1c;
-          cursor: pointer;
-  
-          &:hover {
-            color: #ff6f00;
-          }
-        }
+  max-width: 280px; // Adjust width for a more compact card
+
+  .ant-card {
+    background-color: #000; // Black background
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); // Deeper shadow
+    max-height: 450px; // Reduce the height slightly
+
+    .ant-card-cover img {
+      border-radius: 8px 8px 0 0;
+      object-fit: cover;
+      height: 220px; // Smaller image height for a better fit
+      padding: 0; // Remove padding
+    }
+
+    .ant-card-meta {
+      padding: 6px; // Add padding inside the meta section
+      background-color: #222; // Slightly lighter than the card background
+      border-radius: 15px;
+
+      .ant-card-meta-title {
+        font-size: 15px; // Larger font for movie titles
+        color: #fff;
+        text-align: center; // Center the title
       }
     }
-  
-    // Responsive styling for mobile devices
-    @media (max-width: 576px) {
-      .ant-card {
-        max-width: 100%;
-        max-height: none;  // Remove max-height restriction on small screens
-  
-        .ant-card-cover img {
-          height: 150px;  // Further reduce image height for smaller screens
-        }
-  
-        .ant-card-meta {
-          padding: 8px;
-  
-          .ant-card-meta-title {
-            font-size: 14px;  // Adjust font size for smaller screens
-          }
-  
-          .ant-card-meta-description {
-            font-size: 12px;  // Adjust font size for smaller screens
-          }
-        }
-  
-        .ant-card-actions {
-          padding: 8px;
-  
-          span {
-            font-size: 14px;  // Adjust font size for action text
-          }
+
+    .ant-card-actions {
+      background-color: #111;
+      border-top: 1px solid #333;
+      padding: 12px;
+      text-align: center;
+
+      span {
+        color: #ffb400;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          color: #ff9100;
         }
       }
     }
   }
-  
+
+  // Responsive adjustments
+  @media (max-width: 576px) {
+    .ant-card {
+      max-width: 100%;
+      max-height: none;
+
+      .ant-card-cover img {
+        height: 160px; // Further reduce image height for smaller screens
+      }
+
+      .ant-card-meta-title {
+        font-size: 14px; // Smaller font size on mobile
+      }
+
+      .ant-card-actions {
+        padding: 8px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

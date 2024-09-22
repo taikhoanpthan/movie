@@ -1,11 +1,14 @@
 .hii {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); // 6 equal-width columns
-  gap: 30px;
-  padding: 10px 30px;
-  background-color: rgb(56, 48, 48);
-  width: 100vw; // Chiếm toàn bộ chiều rộng của viewport// Chiếm toàn bộ chiều cao của viewport
-
+  grid-template-columns: repeat(6, 1fr); // 6 columns
+  gap: 15px; // Reduced gap for tighter spacing
+  padding: 20px 40px;
+  background-color: #151d25; // Darker background
+  
+  // Full screen width and height
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto; // Scrollable content for overflow
 
   @media (max-width: 1200px) {
     grid-template-columns: repeat(4, 1fr); // 4 columns on medium screens
