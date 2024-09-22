@@ -7,12 +7,21 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between; // Space between the left and right sections
+  justify-content: space-between;
   background: black;
   padding: 20px 30px;
+  transition: all 0.3s ease; // Smooth transition for background and layout
 
   .header__left {
-    // Add styles for the left section here
+    h1 {
+      font-size: 32px;
+      color: red;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.1); // Scale effect on hover
+      }
+    }
   }
 
   .header__right {
@@ -22,37 +31,144 @@
     align-items: center;
     gap: 20px;
 
+    h1 {
+      font-size: 18px;
+      transition: opacity 0.5s ease;
+      
+      &:hover {
+        opacity: 0.7; // Fading effect on hover
+      }
+    }
+
     button {
       padding: 10px 20px;
       border-radius: 15px;
       outline: none;
       border: none;
-      background-color: #ff9f1c; // Button background color
-      color: black; // Button text color
+      background-color: #ff9f1c;
+      color: black;
       cursor: pointer;
-
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      
       &:hover {
-        background-color: #ff6f00; // Button hover effect
+        background-color: #ff6f00;
+        transform: translateY(-3px); // Slight lift on hover
+      }
+
+      &:active {
+        transform: translateY(1px); // Button press effect
       }
     }
   }
 
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease; // Modal fade-in animation
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: scaleIn 0.3s ease; // Modal content zoom animation
+  }
+
+  .modal-buttons {
+    margin-top: 10px;
+  }
+
+  .modal-buttons button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-3px); // Slight lift on hover
+    }
+
+    &:active {
+      transform: translateY(1px); // Button press effect
+    }
+  }
+
+  .error {
+    color: red;
+    margin-top: 10px;
+    animation: shake 0.3s ease; // Shake animation for error message
+  }
+
   // Responsive design for smaller screens
   @media (max-width: 768px) {
-    flex-direction: column; // Stack elements vertically
-    align-items: flex-start; // Align items to the left
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px 20px;
 
     .header__right {
       width: 100%;
-      justify-content: space-between; // Space between buttons
-      margin-top: 10px; // Add spacing from the left section
+      justify-content: space-between;
+      margin-top: 10px;
 
       button {
-        flex-grow: 1; // Buttons take equal width
+        flex-grow: 1;
         padding: 10px;
-        margin-right: 10px; // Add spacing between buttons
+        margin-right: 10px;
       }
     }
+  }
+}
+
+// Modal animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+// Error shake animation
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
